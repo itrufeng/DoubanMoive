@@ -3,6 +3,9 @@
 var React = require('react');
 var ReactNative = require('react-native');
 var {
+let React = require('react');
+let ReactNative = require('react-native');
+let {
   StyleSheet,
   TabBarIOS,
   Text,
