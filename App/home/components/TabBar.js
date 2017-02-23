@@ -1,8 +1,5 @@
 'use strict';
 
-var React = require('react');
-var ReactNative = require('react-native');
-var {
 let React = require('react');
 let ReactNative = require('react-native');
 let {
@@ -11,6 +8,7 @@ let {
   Text,
   View,
 } = ReactNative;
+import OriginalPage from '../../original/compoments/OriginalPage';
 
 let originIconBase64 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADmklEQVRoQ+2ZjZENQRSFz0aADIgAESACRIAIEAEiQASIYIkAESACRIAIqG+rz1Zvb8/M7Z6effu2dNXU7r433X3Ovef+dO+BLsg4uCA89J/IQE9elvQxrXezd93z4JFDSfckfZZ0e1+JPJf0TNKfROLrPhLBC3iDcUfSp14SzNuVtG6kuCA+nkp6tYbErog4uCHzTtLDtSR2SQQZXZdETCCr32vJ7EJaeORl5okhZM6ayNUU4MiKTPVjlGfOigheeCzpiSR+/5Y8ApEhMtuaCJZ/kEBDgPFaEvXDccHnq8mMInIrgQQU4P0gJQ8qNwRq9WI1mR4iv5I8Ionmp6T3kt6mDDU3p4UMrcyb5NWj/qyVCBb+XqAhaN1aoHke/sbyrWl1iQzf09IQawxiDe83E3Fb8SE1ehGvtL4zRcZesFxPxFqrR2glyD5D2ooZhiUZvGsvIFe6gROx1krkS3IluuzuVAMuynux/PUy4x1/10IEKxHoxIRTaQBT8yusjcGQEL0YpPjslBfylVuIsBCZYsv4AJvl60CGxGLSaCFCCqW4ReODWCJAAYGese7S4H2OvXgdT5ABQ6OFCGkXd0fiw7GUg8AQjxZQQQIyL1LxDJFoSb9YB3BkjLxa1zYiu9DdIg0qOdJALpck3U8FsjbPe+AN9liUU0+MGFzkIISMaFly0J5P1nEaLck4NubemfRQVFo1cFOL9hJpke6pvSNEnHaZfCXgclufOpNLi3WmpOXWJyLdqgEjRFrSbn4eLzeck+Xq1idCJJp2cxIEOpoHIEFLB8wzNXy/1ZytvGCEiNv2azN5vSTh+hFNnzbWXFabXWuJiF1+3C5XVltLgiWdILov6paI2FJTLh9BIicSKbZdwT6XEkeRAJjlu2TYrjoyV81HkgDc34RwEyJTlXY0ic2J1GQ1kgQep5Uhw5FUWnq/cGWvyWotiRw44MvD2aoD25QmS1n1kGAOFsfaAC+7ZlI6aZeHdiZ89qhF/BSRXFZswDkBi7L5XLED7N1CLt6XPgrQVPieq6LmgpjLypcAcyR8LQrBozumbHC7aOBbXlZU77UsK5o8/odRI2HwyCaXDDo3cH42HY6i/UxUWpYVIHxzbo1zZi/B+1rUslmDp3tuGSOWlRd051oGa8udbje4loklEcuqtsa5A5+DLIlYVnmmid6mtxhw+Ls5kTxb7QX4KY+4PmyaJoe7Ym1vsxWg3nW72+beDbea9w8nKA9C6ZZbrAAAAABJRU5ErkJggg==';
 
@@ -42,9 +40,7 @@ export default class TabBar extends React.Component {
           onPress={() => {
             this.setState({selectedTab: '原创'})
           }}>
-          <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-            <Text>原创</Text>
-          </View>
+          <OriginalPage />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           title="书店"
